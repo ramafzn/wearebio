@@ -1,1 +1,1034 @@
-<div id="app"></div>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>We Are Bio</title>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="icon" href="images/favicon.ico" />
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/owl.carousel.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+
+  <!-- MAIN CSS -->
+  <link rel="stylesheet" href="css/templatemo-style.css">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-45C5W3X14Z"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-45C5W3X14Z');
+  </script>
+</head>
+
+<body>
+  <div class="modal" id="errorModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-red-active">
+          <h4 class="modal-title">Error</h4>
+        </div>
+        <div class="modal-body">
+          <span id="emSpan"></span>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger pull-right" data-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="warningModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-orange-active">
+          <h4 class="modal-title">Warning</h4>
+        </div>
+        <div class="modal-body">
+          <span id="wmSpan"></span>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-warning pull-right" data-dismiss="modal" id="wm_okButton">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="successModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-green-active">
+          <h4 class="modal-title" data-i18n="modal-header.success"></h4>
+        </div>
+        <div class="modal-body">
+          <span id="smSpan"></span>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success pull-right" data-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- PRE LOADER -->
+  <section class="preloader">
+    <div class="spinner">
+      <span class="spinner-rotate"></span>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
+    <div class="container">
+
+      <div class="navbar-header">
+        <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                    </button>
+
+        <!-- lOGO TEXT HERE -->
+        <a href="index-2.html" class="navbar-brand">
+          We Are Bio
+        </a>
+      </div>
+
+      <!-- MENU LINKS -->
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-nav-first">
+          <li><a href="#home" class="smoothScroll" data-i18n="nav.home"></a></li>
+          <li><a href="#about" class="smoothScroll" data-i18n="nav.about"></a></li>
+          <li><a href="#team" class="smoothScroll" data-i18n="nav.virtue"></a></li>
+          <li><a href="#menu" class="smoothScroll" data-i18n="nav.gallery"></a></li>
+          <li><a href="#contact" class="smoothScroll" data-i18n="nav.contact"></a></li>
+          <li>
+            <a onclick="changeLanguage('en');">
+              <img src="images/img_us_016.png" />
+            </a>
+          </li>
+          <li>
+            <a onclick="changeLanguage('id');">
+              <img src="images/img_id_016.png" />
+            </a>
+          </li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <img src="images/apple-icon-180x180.png" width="48" height="48" />
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- HOME -->
+  <section id="home" class="slider" data-stellar-background-ratio="0.5">
+    <div class="row">
+      <div class="owl-carousel owl-theme">
+        <div class="item item-first">
+          <div class="caption">
+            <div class="container">
+              <div class="col-md-8 col-sm-12">
+                <h3 data-i18n="slider.title"></h3>
+                <h1 data-i18n="slider.text1"></h1>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item item-second">
+          <div class="caption">
+            <div class="container">
+              <div class="col-md-8 col-sm-12">
+                <h3 data-i18n="slider.title"></h3>
+                <h1 data-i18n="slider.text2"></h1>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item item-third">
+          <div class="caption">
+            <div class="container">
+              <div class="col-md-8 col-sm-12">
+                <h3 data-i18n="slider.title"></h3>
+                <h1 data-i18n="slider.text3"></h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="scroll-btn">
+                    <a href="#">
+                        <span class="mouse">
+                            <span>
+                            </span>
+        </span>
+        </a>
+        <p>scroll me</p>
+
+        </span>
+      </div>
+
+    </div>
+    <div style="position: absolute; width: 100%; height: 169px; left: 0px; padding: 0px; margin: 0px">
+      <img src="images/leafGold-01.png" style="max-width: 100%; max-height: 100%" />
+    </div>
+  </section>
+  <!-- ABOUT -->
+  <section id="about" data-stellar-background-ratio="0.5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-sm-12">
+          <div class="about about-info">
+            <div class="section-title wow fadeInUp" data-wow-delay="0.2s">
+              <h2 style="color: #0d4931" data-i18n="about.title"></h2>
+            </div>
+
+            <div class="wow fadeInUp about" data-wow-delay="0.4s" data-i18n="[html]about.story"></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <div class="wow fadeInUp about-image" data-wow-delay="0.6s">
+            <img src="images/about-image.jpg" class="img-responsive" alt="" />
+          </div>
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col-md-12 col-lg-12">
+          <img src="images/about2-image.jpg" class="img-responsive" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 col-lg-12">
+          <img src="images/about3-image.jpg" class="img-responsive" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="row text-center">
+    <div class="col-md-12 col-lg-12">
+      <img src="images/benefitsForHealth.jpg" align="center" />
+    </div>
+  </div>
+
+  <section id="team" style="background-color: #156039">
+    <div style="position: absolute; width: 100%; height: 169px; top: 0px; padding: 0px; margin: 0px">
+      <img src="images/leafGold-01.png" style="max-width: 100%; max-height: 100%" />
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-sm-12">
+          <div class="section-title wow fadeInUp virtue" data-wow-delay="0.1s">
+            <h2 style="color: #d5ba63" data-i18n="virtue.title"></h2>
+          </div>
+        </div>
+      </div>
+      <div class="row mb-4">
+        <div class="col-md-3 col-sm-3">
+          <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
+            <img src="images/keunggulan1.jpg" class="img-responsive" alt="">
+            <div class="team-hover" style="background-color: #d5ba63">
+              <div class="team-item virtue" style="width: 70%">
+                <p style="color: #156039" data-i18n="[html]virtue.text1"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-3">
+          <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
+            <img src="images/keunggulan2.jpg" class="img-responsive" alt="">
+            <div class="team-hover" style="background-color: #d5ba63">
+              <div class="team-item virtue" style="width: 70%">
+                <p style="color: #156039" data-i18n="[html]virtue.text2"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-3">
+          <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
+            <img src="images/keunggulan3.jpg" class="img-responsive" alt="">
+            <div class="team-hover" style="background-color: #d5ba63">
+              <div class="team-item virtue" style="width: 70%">
+                <p style="color: #156039" data-i18n="[html]virtue.text3"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-3">
+          <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
+            <img src="images/keunggulan4.jpg" class="img-responsive" alt="">
+            <div class="team-hover" style="background-color: #d5ba63">
+              <div class="team-item virtue" style="width: 70%">
+                <p style="color: #156039" data-i18n="[html]virtue.text4"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3 col-sm-3">
+          <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
+            <img src="images/keunggulan5.jpg" class="img-responsive" alt="">
+            <div class="team-hover" style="background-color: #d5ba63">
+              <div class="team-item virtue" style="width: 70%">
+                <p style="color: #156039" data-i18n="[html]virtue.text5"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-3">
+          <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
+            <img src="images/keunggulan6.jpg" class="img-responsive" alt="">
+            <div class="team-hover" style="background-color: #d5ba63">
+              <div class="team-item virtue" style="width: 70%">
+                <p style="color: #156039" data-i18n="[html]virtue.text6"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-3">
+          <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
+            <img src="images/keunggulan7.jpg" class="img-responsive" alt="">
+            <div class="team-hover" style="background-color: #d5ba63">
+              <div class="team-item virtue" style="width: 70%">
+                <p style="color: #156039" data-i18n="[html]virtue.text7"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-3">
+          <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
+            <img src="images/keunggulan8.jpg" class="img-responsive" alt="">
+            <div class="team-hover" style="background-color: #d5ba63">
+              <div class="team-item virtue" style="width: 70%">
+                <p style="color: #156039" data-i18n="[html]virtue.text8"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="row text-center">
+    <div class="col-md-12 col-lg-12">
+      <img src="images/suitableFor.jpg" align="center" />
+    </div>
+  </div>
+
+  <section id="ourProducts" style="background-color: #156039">
+    <div style="position: absolute; width: 100%; height: 169px; top: 0px; padding: 0px; margin: 0px">
+      <img src="images/leafGold-01.png" style="max-width: 100%; max-height: 100%" />
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-sm-12">
+          <div class="section-title wow fadeInUp ourProducts text-center" data-wow-delay="0.1s">
+            <h2 style="color: #d5ba63" data-i18n="ourProducts.title"></h2>
+          </div>
+        </div>
+      </div>
+      <marquee loop="-1">
+        <table width="200%">
+          <tr>
+            <td><img src="images/ourProducts_250ml.jpg" width="400" height="400" class="img-responsive" /></td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td><img src="images/ourProducts_500ml.jpg" class="img-responsive" /></td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td><img src="images/ourProducts_jar_500ml.jpg" class="img-responsive" /></td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td><img src="images/ourProducts_1L.jpg" class="img-responsive" /></td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td><img src="images/ourProducts_30L.jpg" class="img-responsive" /></td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td><img src="images/ourProducts_20KL.jpg" class="img-responsive" /></td>
+          </tr>
+          <tr>
+            <td class="text-center">
+              <h2 style="color: #d5ba63">250 ML</h2>
+            </td>
+            <td></td>
+            <td class="text-center">
+              <h2 style="color: #d5ba63">500 ML</h2>
+            </td>
+            <td></td>
+            <td class="text-center">
+              <h2 style="color: #d5ba63">500 ML</h2>
+            </td>
+            <td></td>
+            <td class="text-center">
+              <h2 style="color: #d5ba63">1 L</h2>
+            </td>
+            <td></td>
+            <td class="text-center">
+              <h2 style="color: #d5ba63">30 L</h2>
+            </td>
+            <td></td>
+            <td class="text-center">
+              <h2 style="color: #d5ba63">20,000 L</h2>
+            </td>
+          </tr>
+        </table>
+      </marquee>
+    </div>
+  </section>
+
+  <section id="menu" data-stellar-background-ratio="0.5">
+    <div class="container">
+      <div style="position: absolute; width: 100%; height: 169px; top: 0px; left: 0px; padding: 0px; margin: 0px">
+        <img src="images/leafGold-01.png" style="max-width: 100%; max-height: 100%" />
+      </div>
+      <div class="row">
+        <div class="col-md-12 col-sm-12">
+          <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+            <h2>Gallery</h2>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <!-- MENU THUMB -->
+          <div class="menu-thumb">
+            <a href="images/menu-image1.jpg" class="image-popup" title="Clear as Drinking Water">
+              <img src="images/menu-image1.jpg" class="img-responsive" alt="">
+
+              <div class="menu-info">
+                <div class="menu-item gallery">
+                  <h3 data-i18n="gallery.title1"></h3>
+                  <p data-i18n="gallery.text1"></p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <!-- MENU THUMB -->
+          <div class="menu-thumb">
+            <a href="images/menu-image2.jpg" class="image-popup" title="100% Natural">
+              <img src="images/menu-image2.jpg" class="img-responsive" alt="">
+
+              <div class="menu-info">
+                <div class="menu-item gallery">
+                  <h3 data-i18n="gallery.title2"></h3>
+                  <p data-i18n="gallery.text2"></p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <!-- MENU THUMB -->
+          <div class="menu-thumb">
+            <a href="images/menu-image3.jpg" class="image-popup" title="Help fight Covid-19">
+              <img src="images/menu-image3.jpg" class="img-responsive" alt="">
+
+              <div class="menu-info">
+                <div class="menu-item gallery">
+                  <h3 data-i18n="gallery.title3"></h3>
+                  <p data-i18n="gallery.text3"></p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <!-- MENU THUMB -->
+          <div class="menu-thumb">
+            <a href="images/menu-image4.jpg" class="image-popup" title="Natural Hair Mask">
+              <img src="images/menu-image4.jpg" class="img-responsive" alt="">
+
+              <div class="menu-info">
+                <div class="menu-item gallery">
+                  <h3 data-i18n="gallery.title4"></h3>
+                  <p data-i18n="gallery.text4"></p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <!-- MENU THUMB -->
+          <div class="menu-thumb">
+            <a href="images/menu-image5.jpg" class="image-popup" title="Fun Facts">
+              <img src="images/menu-image5.jpg" class="img-responsive" alt="">
+
+              <div class="menu-info">
+                <div class="menu-item gallery">
+                  <h3 data-i18n="gallery.title5"></h3>
+                  <p data-i18n="gallery.text5"></p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <!-- MENU THUMB -->
+          <div class="menu-thumb">
+            <a href="images/menu-image6.jpg" class="image-popup" title="Virgin Coconut Oil">
+              <img src="images/menu-image6.jpg" class="img-responsive" alt="">
+
+              <div class="menu-info">
+                <div class="menu-item gallery">
+                  <h3 data-i18n="gallery.title6"></h3>
+                  <p data-i18n="gallery.text6"></p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL -->
+  <section id="testimonial" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+      <div style="position: absolute; width: 100%; height: 169px; top: 0px; left: 0px; padding: 0px; margin: 0px">
+        <img src="images/leafGold-01.png" style="max-width: 100%; max-height: 100%" />
+      </div>
+      <div class="row">
+        <div class="col-md-offset-2 col-md-8 col-sm-12">
+          <div class="owl-carousel owl-theme">
+            <div class="item vision">
+              <div class="tst-author vision">
+                <h2 data-i18n="vision.title"></h2>
+              </div>
+              <p data-i18n="vision.text"></p>
+            </div>
+            <div class="item mission">
+              <div class="tst-author mission">
+                <h2 data-i18n="mission.title"></h2>
+              </div>
+              <p data-i18n="mission.text1"></p>
+            </div>
+            <div class="item mission">
+              <div class="tst-author mission">
+                <h2 data-i18n="mission.title"></h2>
+              </div>
+              <p data-i18n="mission.text2"></p>
+            </div>
+            <div class="item mission">
+              <div class="tst-author mission">
+                <h2 data-i18n="mission.title"></h2>
+              </div>
+              <p data-i18n="mission.text3"></p>
+            </div>
+            <div class="item mission">
+              <div class="tst-author mission">
+                <h2 data-i18n="mission.title"></h2>
+              </div>
+              <p data-i18n="mission.text4"></p>
+            </div>
+            <div class="item mission">
+              <div class="tst-author mission">
+                <h2 data-i18n="mission.title"></h2>
+              </div>
+              <p data-i18n="mission.text5"></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <br />
+  <div class="text-center">
+    <a href="https://www.instagram.com/wearebio_es/" target="_blank">
+      <i class="fa fa-instagram"></i>
+      <strong>Check our Instagram : We Are Bio</strong>
+    </a>
+  </div>
+
+  <!-- CONTACT -->
+  <section id="contact" data-stellar-background-ratio="0.5">
+    <div class="container">
+      <div class="row">
+        <div class="wow fadeInUp col-md-6 col-sm-12" data-wow-delay="0.4s">
+          <div id="google-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d247.43487778525144!2d110.41724116476938!3d-7.130849975800003!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7089b489b80b93%3A0xe6b6224bc06d53cc!2sTrijaya%20Indonusa%2C%20CV!5e0!3m2!1sen!2sid!4v1630636874895!5m2!1sen!2sid"
+              width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+              tabindex="0"></iframe>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <div class="col-md-12 col-sm-12">
+            <div class="section-title wow fadeInUp contact" data-wow-delay="0.1s">
+              <h2 data-i18n="contact.contactUs"></h2>
+            </div>
+          </div>
+
+          <!-- CONTACT FORM -->
+          <form action="#" method="post" class="wow fadeInUp emailForm" id="contact-form" role="form"
+            data-wow-delay="0.8s">
+            <!-- IF MAIL SENT SUCCESSFUL  // connect this with custom JS -->
+            <h6 class="text-success">Your message has been sent successfully.</h6>
+            <!-- IF MAIL NOT SENT -->
+            <h6 class="text-danger">E-mail must be valid and message must be longer than 1 character.</h6>
+            <div class="col-md-6 col-sm-6">
+              <input type="text" class="form-control" id="cf-name" name="name" data-i18n="[placeholder]input.fullNamePlaceHolder">
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <input type="email" class="form-control" id="cf-email" name="email" data-i18n="[placeholder]input.emailAddressPlaceHolder">
+            </div>
+            <div class="col-md-12 col-sm-12">
+              <input type="text" class="form-control" id="cf-subject" name="subject" data-i18n="[placeholder]input.subjectPlaceHolder">
+              <textarea class="form-control" rows="6" id="cf-message" name="message" data-i18n="[placeholder]input.messagePlaceHolder"></textarea>
+              <button class="form-control" id="cf-submit" onclick="postEmail();" type="button" data-i18n="input.submit"></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer" data-stellar-background-ratio="0.5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-sm-8">
+          <div class="footer-info">
+            <div class="section-title contact">
+              <h2 class="wow fadeInUp" data-wow-delay="0.2s" data-i18n="contact.findUs"></h2>
+            </div>
+            <address class="wow fadeInUp" data-wow-delay="0.4s">
+              <p>
+                PT. We Are Bio Indonesia<br />&nbsp;<br />
+                                        Jl. MT Haryono The Amaya CC 16<br />
+                                        Ungaran Timur, Kabupaten Semarang<br />
+                                        Central Java<br />
+                                        Indonesia
+              </p>
+            </address>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-8">
+          <div class="footer-info">
+            <div class="section-title contact">
+              <h2 class="wow fadeInUp" data-wow-delay="0.2s" data-i18n="contact.contactUs"></h2>
+            </div>
+            <address class="wow fadeInUp" data-wow-delay="0.4s">
+              <p>Call : 0812.2858.7221</p>
+              <p><a href="wa.me/6281228587221">WhatsApp / SMS : 0812.2858.7221</a> </p><br />
+              <p>
+                <a href="mailto:f.ramadhani@wearebio.es">f.ramadhani@wearebio.es</a>
+              </p>
+            </address>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-8">
+          <div class="footer-info footer-open-hour">
+            <div class="section-title contact">
+              <h2 class="wow fadeInUp" data-wow-delay="0.2s" data-i18n="contact.openHours"></h2>
+            </div>
+            <div class="wow fadeInUp contact" data-wow-delay="0.4s">
+              <p data-i18n="contact.sunday"></p>
+              <div class="contact">
+                <strong data-i18n="contact.weekDaysTitle"></strong>
+                <p data-i18n="contact.weekDaysText"></p>
+              </div>
+              <div>
+                <strong data-i18n="contact.saturdayTitle"></strong>
+                <p data-i18n="contact.saturdayText"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-4">
+          <div class="wow fadeInUp copyright-text contact" data-wow-delay="0.8s">
+            <p data-i18n="[html]contact.copyright"></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+  <!-- SCRIPTS -->
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/smoothscroll.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="js/i18next.min.js"></script>
+  <script src="js/jquery-i18next.min.js"></script>
+  <script type="text/javascript">
+    $("document").ready
+        (
+            function()
+            {
+                i18next.init
+                (
+                    {
+                        "lng": "en",
+                        "resources":
+                        {
+                            "en":
+                            {
+                                "translation":
+                                {
+                                    "about":
+                                    {
+                                        "title": "About Our Story",
+                                        "story": "<p style='color: #0d4931'>We Are Bio has 5 years of experience under our belt ensuring the quality of our product. Working only with experts and professionals, while using cutting edge technology and cold pressed system, we had managed to bring you the best possible quality of Virgin Coconut Oil (VCO) that has a mild and unique scent of coconut.</p> <p style='color: #0d4931'>We had also implemented a centrifugal method in extracting the oil, so that while we transform our fresh organic coconut into our We Are Bio Virgin Coconut Oil, no nutrients were lost in the process, preserving all of the goodness and benefit of what a coconut could offer.</p>"
+                                    },
+                                    "contact":
+                                    {
+                                        "contactUs": "Contact Us",
+                                        "copyright": "Copyright &copy; 2020 <a href='https://wearebio.es'>PT We Are Bio Indonesia</a>",
+                                        "findUs": "Find Us",
+                                        "openHours": "Operational Hours",
+                                        "saturdayTitle": "Saturday",
+                                        "saturdayText": "08.00 AM - 12.00 PM (GMT +7)",
+                                        "sunday": "Sunday: Closed",
+                                        "weekDaysText": "08.00 AM - 04.00 PM (GMT +7)",
+                                        "weekDaysTitle": "Monday - Friday"
+                                    },
+                                    "gallery":
+                                    {
+                                        "title1": "Clear as Dringking Water",
+                                        "text1": "We Are Bio Virgin Coconut Oil is as clear as drinking water and will stay clear even after defrosting",
+                                        "title2": "100% Natural",
+                                        "text2": "Use We Are Bio as your moisturizer for dry and flaky skin",
+                                        "title3": "Help fight Covid-19",
+                                        "text3": "Lauric Acid in We Are Bio can help your immune system fight against Covid-19 infection",
+                                        "title4": "Natural Hair Mask",
+                                        "text4": "We Are Bio can be used as hair mask to reduce protein loss, penetrate hair shaft and moisturize your hair",
+                                        "title5": "Fun Facts",
+                                        "text5": "Read our fun facts",
+                                        "title6": "Virgin Coconut Oil",
+                                        "text6": "We Are Bio is an edible oil extracted from fresh coconut meat and is widely known as superfood",
+                                    },
+                                    "input":
+                                    {
+                                        "emailAddressPlaceHolder": "E-Mail Address",
+                                        "fullNamePlaceHolder": "Full Name",
+                                        "messagePlaceHolder": "Please write down your question, comments or order",
+                                        "subjectPlaceHolder": "Subject",
+                                        "submit": "Send Message"
+                                    },
+                                    "mission":
+                                    {
+                                        "title": "Mission",
+                                        "text1": "Introducing the world to the quality of Indonesia's coconuts.",
+                                        "text2": "Increasing the livelyhood of Indonesian coconut farmers by integrating the harvested coconuts into our We Are Bio.",
+                                        "text3": "Utilizing the newest cutting edge technology in producing the best possible quality VCO.",
+                                        "text4": "Educating the importance of responsible farming, to Indonesian society and the health benefit of organic virgin coconut oil.",
+                                        "text5": "Ensuring that our quality is always up to international standard while implementing strict quality control to each and every products."
+                                    },
+                                    "modal-header":
+                                    {
+                                        "success": "Success"
+                                    },
+                                    "nav":
+                                    {
+                                        "about": "About",
+                                        "contact": "Contact",
+                                        "gallery": "Gallery",
+                                        "home": "Home",
+                                        "virtue": "Virtue"
+                                    },
+                                    "ourProducts":
+                                    {
+                                        "title": "Our Products"
+                                    },
+                                    "slider":
+                                    {
+                                        "title": "Inspired to Utilize We Are Bio as",
+                                        "text1": "A Complement to Your Daily Nutritional Needs",
+                                        "text2": "A Booster for Your Immunity & Metabolism",
+                                        "text3": "100% Chemical Free Moisturizer for Your Skin"
+                                    },
+                                    "virtue":
+                                    {
+                                        "title": "Why You Should Fall in Love with We Are Bio?",
+                                        "text1": "<strong>We Are Bio Virgin Coconut Oil is 100% organic certified, which means that our coconuts row naturally within its native habitat without using any chemical or GMO</strong>",
+                                        "text2": "<strong>We Are Bio Virgin Coconut Oil has been marketed worldwide and has indeed been acknowledge by international market</strong>",
+                                        "text3": "<strong>Known as one of the best method to produce high quality VCO, We Are Bio has been implementing it for years in order to yield the best possible quality of oil, that is purer and clearer then others in the market</strong>",
+                                        "text4": "<strong>We Are Bio Virgin Coconut Oil contains very low amount of peroxide value and free fatty acids, which prevents the oxidation & rancidity of the oil</strong>",
+                                        "text5": "<strong>Using the cutting edge technology in our filtering systems, we ensure that We Are Bio Virgin Coconut Oil is as clear as drinking water and will stay clear even after defrosting</strong>",
+                                        "text6": "<strong>We Are Bio Virgin Coconut Oil only uses one ingredient and that is freshly farmed organic coconuts, hand selected by our experts and delicately processed to bring you the best virgin coconut oil in the market</strong>",
+                                        "text7": "<strong>Using the right techniques in producing our virgin coconut oil and exercising responsible farming, we assure you that We Are Bio virgin coconut oil is free from preservatives & GMO</strong>",
+                                        "text8": "<strong>The Medium Chain Fatty Acids (MCFA) and Lauric Acid in Virgin Coconut Oil are extremly beneficial in keeping your body healthy and youthful, We Are Bio is safe to be consumed by people of all ages</strong>"
+                                    },
+                                    "vision":
+                                    {
+                                        "title": "Vision",
+                                        "text": "To become the best organic virgin coconut oil ever made both in Indonesia and International market"
+                                    }
+                                }
+                            },
+                            "id":
+                            {
+                                "translation":
+                                {
+                                  "about":
+                                    {
+                                        "title": "Sekilas Tentang Kami",
+                                        "story": "<p style='color: #0d4931'>We Are Bio sudah memiliki pengalaman selama 5 tahun dibidang pengolahan minyak kelapa murni dengan kualitas yang tidak diragukan lagi. Bekerja hanya dengan paraahli dan profesional serta menggunakan teknologi terkini dan sistem ‘cold-pressed’, We Are Bio mampu menghasilkan Virgin CoconutOil (VCO) dengan kualitas terbaik yang memiliki aroma ringanyang khas dari kelapa, tanpa bau tengik sedikitpun.</p> <p style='color: #0d4931'>We Are Bio juga menerapkan metode sentrifugal dalam proses pengekstrasian minyak kelapa, sehingga ketika kelapa organik segar diubah menjadi Virgin Coconut Oil (VCO), tidak ada nutrisi yang hilang dalam prosesnya dan dengan begitu, We Are Bio dapat menjaga semua kebaikan dan manfaatdari buah kelapa.</p>"
+                                    },
+                                    "contact":
+                                    {
+                                        "contactUs": "Kontak Kami",
+                                        "copyright": "Hak Cipta &copy; 2020 <a href='https://wearebio.es'>PT We Are Bio Indonesia</a>",
+                                        "findUs": "Temukan Kami",
+                                        "openHours": "Jam Operasional",
+                                        "saturdayTitle": "Sabtu",
+                                        "saturdayText": "08.00 - 12.00 WIB",
+                                        "sunday": "Minggu: Tutup",
+                                        "weekDaysText": "08.00 - 16.00 WIB",
+                                        "weekDaysTitle": "Senin - Jumat"
+                                    },
+                                    "gallery":
+                                    {
+                                        "title1": "Jernih Seperti Air Minum",
+                                        "text1": "We Are Bio Virgin Coconut Oil sejernih air minum dan akan tetap sama setelah dicairkan",
+                                        "title2": "100% Alami",
+                                        "text2": "Gunakan We Are Bio sebagai pelembab untuk kulit yang kering dan bersisik",
+                                        "title3": "Membantu melawan Covid-19",
+                                        "text3": "Lauric Acid dalam We Are Bio dapat membantu imunitas tubuh melawan infeksi Covid-19",
+                                        "title4": "Masker Rambut Alami",
+                                        "text4": "We Are Bio dapat digunakan sebagai masket rambut untuk mengurangi kehilangan protein, menembus batang rambut dan melembabkannya",
+                                        "title5": "Fakta-fakta Menarik",
+                                        "text5": "Baca fakta-fakta menarik produk kami",
+                                        "title6": "Minyak Kelapa Murni",
+                                        "text6": "We Are Bio adalah minyak nabati yang diekstrak dari daging kelapa segar dan secara luas dikenal sebagai makanan super",
+                                    },
+                                    "input":
+                                    {
+                                        "emailAddressPlaceHolder": "Alamat E-Mail",
+                                        "fullNamePlaceHolder": "Nama Lengkap",
+                                        "messagePlaceHolder": "Silahkan tuliskan pertanyaan, komentar atau pesanan anda",
+                                        "subjectPlaceHolder": "Subjek",
+                                        "submit": "Kirim Pesan"
+                                    },
+                                    "mission":
+                                    {
+                                        "title": "Misi",
+                                        "text1": "Memperkenalkan kualitas kelapa Indonesia ke seluruh dunia.",
+                                        "text2": "Meningkatkan kesejahteraan para petani kelapa dengan mengintegrasikan kelapa yang dihasilkan ke dalam produk We Are Bio.",
+                                        "text3": "Menggunakan teknologi terkini untuk menghasilkan Virgin Coconut Oil (VCO) dengan kualitas terbaik.",
+                                        "text4": "Mengedukasikan pentingnya pertanian organik kepada masyarakat Indonesia dan manfaat Virgin Coconut Oil (VCO) organik untuk kesehatan.",
+                                        "text5": "Memastikan kualitas We Are Bio selalu berbasis pada standar internasional dengan menerapkan kontrol kualitas yang ketat."
+                                    },
+                                    "modal-header":
+                                    {
+                                        "success": "Sukses"
+                                    },
+                                    "nav":
+                                    {
+                                        "about": "Tentang Kami",
+                                        "contact": "Kontak",
+                                        "gallery": "Galeri",
+                                        "home": "Beranda",
+                                        "virtue": "Keunggulan"
+                                    },
+                                    "ourProducts":
+                                    {
+                                        "title": "Produk Kami"
+                                    },
+                                    "slider":
+                                    {
+                                        "title": "Terinspirasi untuk Menggunakan We Are Bio sebagai",
+                                        "text1": "Pelengkap Kebutuhan Nutrisi Harian Anda",
+                                        "text2": "Peningkat Sistem Imunitas dan Metabolisme Tubuh Anda",
+                                        "text3": "100% Pelembab Alami Tanpa Bahan Kimia untuk Kulit Anda"
+                                    },
+                                    "virtue":
+                                    {
+                                        "title": "Mengapa Anda Akan Menyukai We Are Bio?",
+                                        "text1": "<strong>We Are Bio Virgin Coconut Oil sudah tersertifikasi 100% organik, yang artinya setiap kelapa yang kami gunakan tumbuh alami dihabitatnya tanpa menggunakan bahan kimia ataupun GMO</strong>",
+                                        "text2": "<strong>We Are Bio telah dipasarkan di seluruh dunia dan sudah diakui kualitasnya oleh pasar internasional</strong>",
+                                        "text3": "<strong>Merupakan teknik terbaik untuk memproduksi VCO dengan kualitas terbaik, We Are Bio menghasilkan kualitas minyak unggul, yang lebih murni dan bening dibandingkan produk lain di pasaran</strong>",
+                                        "text4": "<strong>We Are Bio mengandung sangat sedikit nilai peroksida dan asam lemak bebas, yang mencegah oksidasi dan ketengikan minyak.</strong>",
+                                        "text5": "<strong>Menggunakan teknologi terkini dalam sistem filterisasi,kami memastikan bahwa Virgin Coconut Oil (VCO) We Are Bio sebening air minum dan akan tetap jernih</strong>",
+                                        "text6": "<strong>We Are Bio hanya menggunakan satu jenis bahan baku saja, yaitu kelapa organik yang diolah dan dipilih langsung oleh para ahli serta diproses dengan hati-hati untuk memberikan Anda Virgin Coconut Oil (VCO) terbaik di pasaran</strong>",
+                                        "text7": "<strong>Menggunakan teknik yang tepat untuk memproduksi VCO dan sistem pertanian yang bertanggung jawab, kami menjamin bahwa VCO We Are Bio 100% bebas dari bahan pengawet dan tidak memiliki rasa artificial sama sekali</strong>",
+                                        "text8": "<strong>Medium Chain Fatty Acids (MCFA) dan Asam Laurat dalam VCO sangat bermanfaat dalam menjaga kesehatan tubuh Anda dan aman untuk dikonsumsioleh semua kalangan usia</strong>"
+                                    },
+                                    "vision":
+                                    {
+                                        "title": "Visi",
+                                        "text": "Menjadi produk minyak kelapa murni dengan kualitas terbaik di Indonesia dan pasar internasional"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    function(error, t)
+                    {
+                        jqueryI18next.init(i18next, $);
+                        $(".about").localize();
+                        $(".contact").localize();
+                        $(".emailForm").localize();
+                        $(".gallery").localize();
+                        $(".mission").localize();
+                        $(".modal-header").localize();
+                        $(".nav").localize();
+                        $(".ourProducts").localize();
+                        $(".slider").localize();
+                        $(".virtue").localize();
+                        $(".vision").localize();
+                    }
+                );
+            }
+        );
+
+        function changeLanguage(languageId)
+        {
+            i18next.changeLanguage(languageId);
+
+            $(".about").localize();
+            $(".contact").localize();
+            $(".emailForm").localize();
+            $(".gallery").localize();
+            $(".mission").localize();
+            $(".modal-header").localize();
+            $(".nav").localize();
+            $(".ourProducts").localize();
+            $(".slider").localize();
+            $(".virtue").localize();
+            $(".vision").localize();
+
+            var message = "Language has been changed to English";
+
+            if (languageId == "id")
+            {
+                message = "Bahasa telah diubah menjadi Indonesia";
+            }
+
+            showSuccess(message);
+        }
+
+        function postEmail()
+        {
+             var name = $("#cf-name").val().trim();
+
+             if (name.length == 0)
+             {
+                  showWarning("Name is still blank");
+                  return;
+             }
+
+             var email = $("#cf-email").val().trim();
+
+             if (email.length == 0)
+             {
+                  showWarning("Email address is still blank");
+                  return;
+             }
+
+             var subject = $("#cf-subject").val().trim();
+
+             if (subject.length == 0)
+             {
+                  showWarning("Subject is still blank");
+                  return;
+             }
+
+             var message = $("#cf-message").val().trim();
+
+             if (message.length == 0)
+             {
+                  showWarning("Message is still blank");
+                  return;
+             }
+
+             $.ajax
+             (
+                  {
+                       "url": "<?= BASE_URL ?>index.php/setting/change_password/home_api<?= URL_SUFFIX ?>",
+                       "type": "PUT",
+                       "data":
+                       {
+                            "oldPassword": oldPassword,
+                            "newPassword": newPassword
+                       },
+                       "error": function(xhr, status, error)
+                       {
+                            if (xhr.responseText != null)
+                            {
+                                 notify(xhr.responseText, "danger");
+                            }
+                            else
+                            {
+                                 showError(error);
+                            }
+
+                            return;
+                       },
+                       "success": function(response)
+                       {
+                            if (response.status != "ok")
+                            {
+                                 showWarning(response.message);
+                                 return;
+                            }
+
+                            showSuccess(response.message);
+                       }
+                  }
+             );
+        }
+
+        function showError(message)
+        {
+             $("#errorModal").modal();
+             $("#emSpan").html(message);
+        }
+
+        function showSuccess(message)
+        {
+             $("#successModal").modal();
+             $("#smSpan").html(message);
+        }
+
+        function showWarning(message)
+        {
+             $("#warningModal").modal();
+             $("#wmSpan").html(message);
+        }
+  </script>
+  <style>
+    .float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 40px;
+      right: 40px;
+      background-color: #25d366;
+      color: #FFF;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 2px 2px 3px #999;
+      z-index: 100;
+    }
+
+    .my-float {
+      margin-top: 16px;
+    }
+  </style>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <a href="https://api.whatsapp.com/send?phone=6281228587221&text=Hi%20there%20my%20name%20is ______." class="float"
+    target="_blank">
+    <i class="fa fa-whatsapp my-float"></i>
+  </a>
+</body>
+
+</html>
